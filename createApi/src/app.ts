@@ -9,6 +9,7 @@ import {
   mobilesRouter,
   router,
   televisionsRouter,
+  usersRouter,
 } from "./routes";
 
 const app = express();
@@ -28,7 +29,8 @@ app.use(
   audioDevicesRouter,
   computersRouter,
   mobilesRouter,
-  televisionsRouter
+  televisionsRouter,
+  usersRouter
 );
 
 const port = process.env.PORT;

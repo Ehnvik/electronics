@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import jwt, { DecodeOptions } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -29,8 +29,4 @@ export const verifyJWT = (token: string) => {
     throw new Error("JWT secret is not defined");
   }
   return jwt.verify(token, secret);
-};
-
-export const decodeJWT = (token: string) => {
-  return jwt.decode(token, { json: true, complete: true } as DecodeOptions);
 };
